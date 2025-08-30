@@ -1,0 +1,22 @@
+{
+  "name": "Selenium Java Maven Example",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "dev",
+  "workspaceFolder": "/selenium-java-maven-example",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "shutdownAction": "stopCompose",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": "true"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+services:
+  dev:
+    build:
+      dockerfile: .devcontainer/Dockerfile
+      context: .
+    command: sleep infinity
+    volumes:
+      - .:/selenium-java-maven-example
+    depends_on:
+      chrome:
+        condition: service_healthy
+  chrome:
+    # see https://github.com/SeleniumHQ/docker-selenium
+    image: selenium/standalone-chrome:4.35.0-20250808
+    shm_size: 2gb
+    ports:
+      - 4444:4444 # Selenium Grid WebDriver.
+      - 7900:7900 # noVNC console.
+    healthcheck:
+      test: ["CMD", "curl", "--silent", "--fail-with-body", "--max-time", "5", "http://localhost:4444/readyz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
