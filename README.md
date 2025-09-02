@@ -17,7 +17,7 @@ Access the Selenium Grid WebDriver:
 
 http://localhost:4444
 
-Access the noVNC console (use the `secret` password):
+Access the noVNC console:
 
 http://localhost:7900
 

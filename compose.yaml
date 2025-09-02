@@ -12,10 +12,12 @@ services:
   chrome:
     # see https://github.com/SeleniumHQ/docker-selenium
     image: selenium/standalone-chrome:4.35.0-20250808
-    shm_size: 2gb
+    environment:
+      - SE_VNC_NO_PASSWORD=true
     ports:
       - 4444:4444 # Selenium Grid WebDriver.
       - 7900:7900 # noVNC console.
+    shm_size: 2gb
     healthcheck:
       test: ["CMD", "curl", "--silent", "--fail-with-body", "--max-time", "5", "http://localhost:4444/readyz"]
       interval: 10s
