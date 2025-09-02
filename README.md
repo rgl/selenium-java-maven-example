@@ -19,7 +19,7 @@ http://localhost:4444
 
 Access the noVNC console:
 
-http://localhost:7900
+http://localhost:7900/?autoconnect=true&resize=scale
 
 In Visual Studio Code, select the `Testing` icon, and execute the tests. Observe the browser session in the noVNC interface.
 
