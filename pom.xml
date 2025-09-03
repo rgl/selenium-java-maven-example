@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v137</artifactId>
+            <artifactId>selenium-devtools-v139</artifactId>
             <version>${selenium.version}</version>
         </dependency>
         <dependency>
