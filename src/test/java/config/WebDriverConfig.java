@@ -6,13 +6,13 @@ import java.net.URISyntaxException;
 import java.util.Map;
 import java.util.Optional;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.v137.emulation.Emulation;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.WebDriver;
 
 public class WebDriverConfig {
     private static final String REMOTE_WEB_DRIVER_URL = "http://chrome:4444";
